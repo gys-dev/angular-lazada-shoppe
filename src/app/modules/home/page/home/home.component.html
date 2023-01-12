@@ -1,0 +1,12 @@
+<div class="bg-white">
+    <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="sr-only">Products</h2>
+
+        <div class="grid grid-cols-9 mb-4">
+            <div class="col-start-7 col-span-3">
+              <app-search-input (onTextChange)="onSearch($event)"></app-search-input>
+            </div>
+        </div>
+      <app-product-list [(products)] = "products" (onAddCard)="onAdd($event)"></app-product-list>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<p>contact works!</p>
+
+
+<div *ngIf="false; else renderThis ">
+    Work fine without any things
+</div>
+
+
+<ng-container [ngTemplateOutlet]="renderThis" [ngTemplateOutletContext]="{label: 'Tran Duc Y'}">
+
+</ng-container>
+
+<ng-template
+    let-label="label"
+    #renderThis
+>
+    <div>
+        You can't see this content {{label}}
+    </div>
+</ng-template>
